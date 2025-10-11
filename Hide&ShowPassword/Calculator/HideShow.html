@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login window</title>
+    <link rel="stylesheet" href="HideShow.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="login-box">
+      <p id="login-text">Login into your account</p>
+      <div><input placeholder="username" type="text" id="username-box" /></div>
+      <div id="password-box">
+        <input type="password" id="password" placeholder="password" />
+        <img onclick="changeVisibility()" id="eyeIcon" src="eye-close.png" />
+      </div>
+      <button id="log-in-button">Log in</button>
+    </div>
+    <script src="HideShow.js"></script>
+  </body>
+</html>

@@ -1,0 +1,78 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Lato";
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(to bottom right, #87bcf1, #34495e);
+}
+
+#login-box {
+  margin: 316px auto;
+  background: #fff;
+  max-width: 500px;
+  width: 400px;
+  text-align: center;
+  background: #e6f0fa;
+  border-radius: 10px;
+  height: 280px;
+  padding: 25px;
+  box-shadow: 10px 10px 8px #2c2c2c;
+}
+
+#username-box {
+  background: #fff;
+  width: 350px;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  font-size: 1.2rem;
+  padding-left: 7px;
+  color: #333333;
+}
+
+#password-box {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  height: 40px;
+  margin-top: 30px;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+#password {
+  font-size: 1.2rem;
+  width: 100%;
+  border: none;
+  outline: none;
+  padding-left: 7px;
+  color: #333333;
+}
+
+#eyeIcon {
+  width: 30px;
+  cursor: pointer;
+}
+
+#login-text {
+  margin-bottom: 35px;
+  font-weight: bold;
+  font-size: 1.4rem;
+  color: #333333;
+}
+
+#log-in-button {
+  padding: 5px;
+  margin-top: 30px;
+  width: 150px;
+  border-radius: 15px;
+  border: none;
+  font-size: 1.4rem;
+  color: #333333;
+  background: linear-gradient(to bottom right, #d8e4f0, #9ec9f3);
+  cursor: pointer;
+}

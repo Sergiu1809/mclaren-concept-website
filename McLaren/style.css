@@ -1,0 +1,1014 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "dm sans";
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/*--------------------------------- Hero --------------------------------------*/
+
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), transparent);
+  z-index: 0;
+}
+
+.hero-section video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* important: umple și cropuiește fără bare */
+  z-index: -1;
+}
+
+#header {
+  position: absolute;
+  width: 100%;
+  height: 8.5vh;
+  background-color: #000000a6;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  animation: fadeInHeader 1s ease;
+}
+
+@keyframes fadeInHeader {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#logo {
+  font-size: clamp(1rem, 1.85vw, 3rem);
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  margin-left: 15px;
+  justify-self: start;
+  text-decoration: 0;
+}
+.M {
+  font-style: italic;
+  color: #fff;
+}
+.orange {
+  color: #ff8000;
+}
+
+#McLarenIcon {
+  position: absolute;
+  top: 18%;
+  left: 7.2%;
+}
+
+#McLarenIcon:hover {
+  background-image: url("photos/6231dcbe87b040037309980d_Untitled20-%202019-10-18T150646.026.jpeg");
+}
+
+.buttons {
+  justify-self: center;
+  display: flex;
+  gap: 20px;
+}
+
+.button-header {
+  text-decoration: none;
+  font-size: 0.9rem;
+  color: #fff;
+  padding: 10px 20px;
+  background-color: #00000000;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.button-header:hover {
+  transform: translateY(-2px);
+  color: #ff8000;
+}
+
+#accountIcon {
+  width: 22px;
+  height: 22px;
+  background-image: url("photos/user (1).png");
+  background-size: cover;
+  background-position: center;
+  margin-right: 15px;
+  cursor: pointer;
+  transition: background-image 0.2s;
+  justify-self: end;
+}
+
+#accountIcon:hover {
+  background-image: url("photos/orange-icon.png");
+}
+
+#video-overlay {
+  font-size: 1.7rem;
+  font-weight: 600;
+  text-align: center;
+  width: 70%;
+  background-color: #f7050500;
+  position: absolute;
+  left: 50%;
+  top: 70%;
+  transform: translateX(-50%);
+  animation: slideUp 0.6s ease-out forwards;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateX(-50%) translateY(10vh); /* jos de tot */
+    opacity: 0;
+  }
+  to {
+    transform: translateX(-50%) translateY(0); /* poziția finală */
+    opacity: 1;
+  }
+}
+
+.big {
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: 400;
+  line-height: 1.2;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
+}
+
+.big-index {
+  font-size: clamp(3rem, 5vw, 5rem);
+  font-weight: 400;
+  line-height: 1.2;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
+}
+
+mark {
+  color: #fff;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+  padding: 0 0.4rem;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+#btnDiscover {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #000000a6;
+  color: #fff;
+  width: 17rem;
+  padding: 10px 20px;
+  font-family: "dm sans";
+  font-size: clamp(1rem, 2vw, 1.4rem);
+  font-weight: 400;
+  margin-top: 1.5rem;
+  outline: 0;
+  border: 2px solid #ff8000;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+#btnDiscover:hover {
+  transform: translateY(-2px);
+  background-color: #ff8000;
+}
+
+/*--------------------------------- Cars --------------------------------------*/
+
+.cars-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  background-color: #000000;
+}
+
+#title-cars-section {
+  color: #fff;
+  font-size: clamp(1rem, 3vw, 3rem);
+  font-weight: 300;
+  margin: 8rem 0;
+  font-family: "dm sans";
+  text-decoration: underline #ff8000 3px;
+  text-underline-offset: 15px;
+}
+
+#cars-container {
+  background: #000000;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 3rem;
+  padding: 2rem 4rem;
+}
+
+.car {
+  display: block; /* pentru a arăta ca div */
+  text-decoration: none; /* fără subliniere */
+  color: inherit; /* păstrează culoarea textului */
+
+  position: relative;
+  aspect-ratio: 16 / 12;
+  background: #2c2c2c;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.6s ease, box-shadow 0.4s ease;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+#car1 {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 1)),
+    url("photos/2025_novitec_mclaren_750s_1_1920x1080.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#car2 {
+  background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 1)),
+    url("photos/2022-McLaren-Artura---Rear-Three-Quarter-2100098-1920x1080.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#car1:hover {
+  transform: scale(1.05) translateY(20px);
+  box-shadow: 0 8px 25px rgba(88, 88, 88, 0.35);
+}
+
+#car2:hover {
+  transform: scale(1.05) translateY(20px);
+  box-shadow: 0 8px 25px rgba(88, 88, 88, 0.35);
+}
+
+#car3 {
+  background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 1)),
+    url("photos/2026-McLaren-W1---Rear-Three-Quarter-3890653-1920x1080.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#car4 {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 1)),
+    url("photos/McLaren-GTS-2024-1280-1f8b415f2b808e240317b234c0a65ae82c.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#car3:hover {
+  transform: scale(1.05) translateY(-20px);
+  box-shadow: 10px 0px 25px rgba(88, 88, 88, 0.35);
+}
+
+#car4:hover {
+  transform: scale(1.05) translateY(-20px);
+  box-shadow: -12px 0px 25px rgba(88, 88, 88, 0.35);
+}
+
+.title-car-model {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  top: 5%;
+  color: #fff;
+  font-size: 3.5rem;
+  font-weight: 200;
+  font-family: "DM sans";
+  margin-top: 20px;
+}
+
+.short-description-car-card {
+  position: absolute;
+  left: 50%;
+  top: 1.5%;
+  transform: translateX(-50%);
+  color: #fff;
+}
+
+.car-card-button {
+  color: #fff;
+  background: 0;
+  border: 0;
+  outline: 0;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  position: absolute;
+  left: 50%;
+  bottom: 3.5%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  transition: text-underline-offset 0.4s;
+}
+
+.car-card-button:hover {
+  text-underline-offset: 2px;
+}
+
+/*--------------------------------- Blog --------------------------------------*/
+
+.blog-section {
+  width: 100%;
+  height: auto;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#blog-title {
+  color: #fff;
+  font-size: clamp(1rem, 3vw, 3rem);
+  font-weight: 300;
+  margin: 3rem 0;
+  font-family: "dm sans";
+  text-decoration: underline #ff8000 3px;
+  text-underline-offset: 10px;
+}
+
+.blog-cards-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2.5rem;
+  padding-bottom: 8rem;
+}
+
+.blog-cards {
+  position: relative;
+  aspect-ratio: 4/3;
+  background: #fff;
+  border-radius: 5px;
+  overflow: hidden;
+  cursor: pointer;
+  flex: 1 1 350px;
+  max-width: 500px;
+}
+
+.blog-images {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.blog-cards:hover .blog-images {
+  transform: scale(1.05);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+}
+
+.blog-cards-title {
+  position: absolute;
+  left: 1.5%;
+  bottom: 4.5%;
+  color: #fff;
+  font-size: clamp(1rem, 1vw, 1.3rem);
+}
+
+.arrow-right {
+  position: absolute;
+  bottom: 3%;
+  right: 1.5%;
+  height: auto;
+  z-index: 10;
+  border-radius: 8px;
+  transition: background-color 1s;
+}
+
+.arrow-right:hover {
+  background-color: #2b2b2b;
+}
+
+/*--------------------------------- History  --------------------------------------*/
+
+.history-section {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+  background: #000;
+  padding-bottom: 7rem;
+}
+
+.history-photo-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url("photos/amclarenlemans1995.webp");
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+}
+
+.history-photo-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1));
+  z-index: 1;
+}
+
+#history-txt-mclaren {
+  color: #fff;
+  position: absolute;
+  left: 50%;
+  top: 11%;
+  transform: translateX(-50%);
+  z-index: 2;
+  font-size: clamp(3rem, 4vw, 4rem);
+  font-weight: 600;
+  text-align: center;
+}
+
+#history-txt-history {
+  color: #fff;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 13%;
+  z-index: 2;
+  font-size: clamp(8rem, 10vw, 14rem);
+  font-weight: 500;
+  text-align: center;
+  font-family: "allura";
+}
+
+.history-container-position {
+  width: 90%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 4rem;
+  padding: 6rem 0;
+}
+
+.history-photo1 {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)),
+    url("photos/gettyimages_3087595.jpg");
+  background-size: cover;
+  background-position: center;
+  flex: 1 1 350px;
+  max-width: 600px;
+  aspect-ratio: 16/9;
+  border-radius: 5px;
+}
+
+.history-story-text-containers {
+  flex: 1 1 350px;
+  max-width: 600px;
+  height: auto;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 2.5rem;
+  color: #fff;
+}
+
+#history-text-title {
+  font-size: clamp(1.5rem, 2vw, 3rem);
+  text-decoration: underline #ff8000 3px;
+  text-underline-offset: 15px;
+}
+
+#history-text-p {
+  font-size: clamp(0.8rem, 2vw, 1.2rem);
+}
+
+.view-story-button {
+  gap: 10px;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  width: 15rem;
+  padding: 10px 20px;
+  border: solid #ff8000 2px;
+  background-color: #000;
+  font-size: clamp(0.8rem, 1vw, 1.1rem);
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: transform 0.2s;
+}
+
+.view-story-button:hover {
+  transform: translateY(-2px);
+  background-color: #ff8000;
+}
+
+.history-photo2 {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)),
+    url("photos/9_McLaren_M6GT-768x432.jpg");
+  background-size: cover;
+  background-position: center;
+  flex: 1 1 350px;
+  max-width: 600px;
+  aspect-ratio: 16/9;
+  border-radius: 5px;
+}
+
+/*--------------------------------- Footer --------------------------------------*/
+
+.footer-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background: #111111;
+  font-size: 1rem;
+  padding: 2rem 0 4rem 0;
+}
+
+.container-footer {
+  display: flex;
+  flex-wrap: wrap; /* permite să treacă pe rânduri */
+  gap: 2rem; /* spațiu între coloane */
+  width: 90%;
+  max-width: 1400px; /* nu devine prea lat pe monitoare mari */
+  color: #fff;
+  justify-content: center; /* centrează coloanele pe mobil */
+}
+
+.footer-sections {
+  flex: 1 1 180px; /* crește/scade cu minim 180px */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+  min-width: 150px; /* evită să fie prea îngust pe mobil */
+}
+
+.footer-subtitle {
+  font-size: clamp(0.8rem, 1vw, 1.1rem);
+  color: #adadad;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.footer-text {
+  font-size: clamp(0.7rem, 0.9vw, 1rem);
+  cursor: pointer;
+  transition: color 0.2s;
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.footer-text:hover {
+  color: #ff8000;
+}
+
+/* Logo în footer */
+
+#logo-footer-text {
+  font-weight: 700;
+  font-size: clamp(1.8rem, 2.5vw, 2.5rem);
+  white-space: nowrap;
+}
+
+/*--------------------------------- Car Pages Hero--------------------------------------*/
+
+.hero-background-photo-car-pages {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-position: center;
+  background-size: cover;
+}
+
+#hero-photo-750s {
+  background-image: url("photos/2025_novitec_mclaren_750s_9_1920x1080.jpg");
+}
+
+#hero-photo-artura {
+  background-image: url("photos/2022-McLaren-Artura---Side-2100083-1920x1080.jpg");
+}
+
+#hero-photo-w1 {
+  background-image: url("photos/2026-McLaren-W1---Side-3890639-1920x1080.jpg");
+}
+
+#hero-photo-gts {
+  background-image: url("photos/2024-McLaren-GTS---Front-Three-Quarter-3879478-1920x1080.jpg");
+}
+
+.allura-cars-overlay {
+  font-family: "allura";
+  font-size: 5rem;
+  color: #fff;
+  font-weight: 400;
+}
+
+/*--------------------------------- Car Pages Introduction--------------------------------------*/
+
+.introduction-car-pages-section {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: auto;
+  width: 100%;
+  background-color: #000;
+}
+
+.text-car-introduction-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  color: #fff;
+  flex: 1 1 400px;
+  max-width: 1000px;
+  margin: 7rem 0;
+  padding: 0 2rem;
+  gap: 3rem;
+}
+
+.title-car-pages-intro {
+  font-weight: 300;
+  font-size: clamp(2rem, 3vw, 4.6rem);
+}
+
+.text-car-pages-intro {
+  font-size: clamp(1.2rem, 2vw, 1.3rem);
+}
+
+.specs-introduction-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  color: #fff;
+  margin-bottom: 3rem;
+}
+
+.specs-containers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1 250px;
+  max-width: 500px;
+  gap: 1rem;
+  padding: 1rem;
+  border-right: solid 2px #3d3d3d;
+}
+
+.specs-containers:last-child {
+  border: none;
+}
+
+.title-specs {
+  font-size: clamp(1.4rem, 2vw, 1.5rem);
+}
+
+.info-specs {
+  font-size: clamp(4rem, 4vw, 5.5rem);
+  font-weight: 200;
+}
+
+.measurement {
+  color: #9b9b9b;
+}
+
+/*--------------------------------- Car Pages--------------------------------------*/
+
+.photo-car-pages-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+
+#photo1-750s {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)),
+    url("photos/2025_novitec_mclaren_750s_3_1920x1080.jpg");
+}
+
+#photo2-750s {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)),
+    url("photos-car-pages/2025_novitec_mclaren_750s_4_1920x1080.jpg");
+}
+
+#photo1-artura {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)),
+    url("photos-car-pages/Original-13271-McLarenArtura34.jpg");
+}
+
+#photo2-artura {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)),
+    url("photos-car-pages/Original-13270-McLarenArtura31.jpg");
+}
+
+#photo1-w1 {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)),
+    url("photos-car-pages/2025-McLaren-W1-006-1080.jpg");
+}
+
+#photo2-w1 {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)),
+    url("photos-car-pages/2025-McLaren-W1-002-1080.jpg");
+}
+
+#photo1-gts {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)),
+    url("photos-car-pages/08_GTS_High_Front_34_Dynamic-scaled.jpg");
+}
+
+#photo2-gts {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)),
+    url("photos-car-pages/15789-ThenewMcLarenGTS-2048x1152.jpg");
+}
+
+.photo-car-pages-overlay-left {
+  position: absolute;
+  left: 5%;
+  bottom: 6%;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-align: left;
+}
+
+.photo-car-pages-overlay-right {
+  position: absolute;
+  right: 5%;
+  bottom: 6%;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-align: right;
+}
+
+.big-overlay-text {
+  font-size: clamp(2rem, 2.5vw, 4rem);
+  font-weight: 300;
+}
+
+.small-overlay-text {
+  font-size: clamp(1rem, 1vw, 1.5rem);
+  font-weight: 200;
+}
+
+.cards-car-pages-section {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.cards-car-pages-container {
+  width: 100%;
+  background: #000000;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.cards-car-pages {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex: 1 1 300px;
+  max-width: 550px;
+  height: 65vh;
+  background-color: #000000;
+  overflow: hidden;
+  border-radius: 5px;
+  gap: 2.5rem;
+  margin: 8rem 0;
+}
+
+.container-for-overlay {
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.6s ease;
+  will-change: transform;
+}
+
+.photos-cards-car-pages {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
+
+.cards-car-pages:hover .container-for-overlay {
+  transform: scale(1.05);
+}
+
+.title-car-pages-cards {
+  color: #fff;
+  font-weight: 600;
+  font-size: clamp(1.4rem, 1vw, 2rem);
+}
+
+.text-car-pages-cards {
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+.extra-black {
+  width: 100%;
+  height: 10vh;
+  background-color: #000;
+}
+
+/*--------------------------------- Blog Pages--------------------------------------*/
+
+.hero-background-blog-pages {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-position: center;
+  background-size: cover;
+}
+
+#hero-photo-formula1 {
+  background-image: url("photos-blog/desktop-wallpaper_team_2025.jpg");
+}
+
+.blog-pages-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  overflow: hidden;
+  background-color: #fff;
+  width: 100%;
+  height: auto;
+}
+
+.blog-pages-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1500px;
+  height: auto;
+  margin: 4rem 0;
+}
+
+.blog-pages-title {
+  font-size: clamp(1.5rem, 3vw, 4rem);
+  font-weight: 500;
+  text-align: left;
+  margin: 0 2rem;
+}
+
+.blog-pages-data-read {
+  font-size: clamp(0.7rem, 1vw, 0.9rem);
+  text-align: left;
+  margin: 0 2rem;
+  font-weight: 300;
+  color: #636363;
+}
+
+.blog-pages-text {
+  font-size: clamp(1rem, 1vw, 1.5rem);
+  font-weight: 500;
+  text-align: left;
+  margin: 3rem 2rem;
+  line-height: 1.4;
+}
+
+.blog-pages-photos-containers {
+  height: auto;
+  width: 100%;
+  padding: 0 2rem;
+}
+
+.blog-pages-photos {
+  height: 80vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.text-info-blog-photos {
+  font-size: clamp(0.7rem, 1vw, 0.9rem);
+  text-align: left;
+  margin: 0 2rem;
+  font-weight: 300;
+  color: #000000;
+  margin-top: 0.5rem;
+}
+
+#blog-pages-formula1-photo1 {
+  background-image: url("photos-blog/report_0010_gp2424_193025_67a4774.jpg");
+}
+
+#blog-pages-formula1-photo2 {
+  background-image: url("photos-blog/skysports-mcl38-mclaren-launch_6455034.jpg");
+}
+
+#blog-pages-formula1-photo3 {
+  background-image: url("photos-blog/skysports-lando-norris-oscar_6635770.jpg");
+}
+
+#blog-pages-formula1-photo4 {
+  background-image: url("photos-blog/GettyImages-2206484891-scaled.webp");
+}
+
+#hero-photo-innovation {
+  background-image: url("photos-blog/7.jpg");
+}
+
+#blog-pages-innovation-photo1 {
+  background-image: url("photos-blog/mtc-1019874523-lat-20231008-gp2317_162056_67a1392.webp");
+}
+
+#blog-pages-innovation-photo2 {
+  background-image: url("photos-car-pages/30718784.jpg");
+}
+
+#blog-pages-innovation-photo3 {
+  background-image: url("photos-car-pages/12944-McLarenArturaHigh-PerformanceHybridGraphic.jpg");
+}
+
+#hero-photo-experience {
+  background-image: url("photos-blog/570gt1.webp");
+}
+
+#blog-pages-experience-photo1 {
+  background-image: url("photos-car-pages/14919-McLaren750SSpider_crop-16x9.webp");
+}
+
+#blog-pages-experience-photo2 {
+  background-image: url("photos-blog/2020-McLaren-GT-75.jpg");
+}
+
+#blog-pages-experience-photo3 {
+  background-image: url("photos-blog/mclaren-720s_100692981.jpg");
+}
+
+#hero-photo-legend {
+  background-image: url("photos-car-pages/Bruce-McLaren-looks-sideways-ahead-of-the-1962-Monaco-Grand-Prix.webp");
+}
+
+#blog-pages-bruce-photo1 {
+  background-image: url("photos-history-blogs/McLaren_60_Article_BruceMcLaren_6.webp");
+}
+
+#blog-pages-bruce-photo2 {
+  background-image: url("photos-history-blogs/1967_McLaren_M6A-0-1536.jpg");
+}
