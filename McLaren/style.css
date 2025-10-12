@@ -1012,3 +1012,25 @@ mark {
 #blog-pages-bruce-photo2 {
   background-image: url("photos-history-blogs/1967_McLaren_M6A-0-1536.jpg");
 }
+
+.quote-section {
+  width: 100%;
+  height: auto;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.quote-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1500px;
+  height: auto;
+  margin: 4rem 0;
+  background: #000;
+}
