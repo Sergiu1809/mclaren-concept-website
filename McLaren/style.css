@@ -1013,6 +1013,10 @@ mark {
   background-image: url("photos-history-blogs/1967_McLaren_M6A-0-1536.jpg");
 }
 
+#blog-pages-bruce-photo3 {
+  background-image: url("photos-history-blogs/licensed-image (1).jpeg");
+}
+
 .quote-section {
   width: 100%;
   height: auto;
@@ -1021,16 +1025,55 @@ mark {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  margin: 0 0 5rem 0;
 }
 
 .quote-container {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   width: 100%;
   max-width: 1500px;
   height: auto;
-  margin: 4rem 0;
-  background: #000;
+  background: #fff;
+  padding: 0 2rem;
+  gap: 2rem;
+}
+
+.quote-photo-and-author-description-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+#bruce-img-quote-section {
+  height: 15vh;
+}
+
+.author-description-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.author {
+  color: #000000;
+  font-size: clamp(0.6rem, 1vw, 1.1rem);
+}
+
+.author-description {
+  color: #000000;
+  font-size: clamp(0.5rem, 1vw, 0.7rem);
+}
+
+.quote-text {
+  flex: 1 1 400px;
+  color: #000000;
+  font-size: clamp(1.2rem, 2vw, 1.8rem);
+  padding: 0.5rem;
 }
