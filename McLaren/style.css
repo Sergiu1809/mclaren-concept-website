@@ -174,7 +174,7 @@ mark {
   font-family: "Josefin Sans", sans-serif;
 }
 
-#btnDiscover {
+.btnDiscover {
   display: inline-block;
   text-decoration: none;
   background-color: #000000a6;
@@ -192,7 +192,7 @@ mark {
   transition: transform 0.2s;
 }
 
-#btnDiscover:hover {
+.btnDiscover:hover {
   transform: translateY(-2px);
   background-color: #ff8000;
 }
@@ -216,8 +216,9 @@ mark {
   font-weight: 300;
   margin: 8rem 0;
   font-family: "dm sans";
-
+  text-align: center;
   text-underline-offset: 15px;
+  padding: 0rem 1rem;
 }
 
 #cars-container {
@@ -234,14 +235,13 @@ mark {
   display: block; /* pentru a arăta ca div */
   text-decoration: none; /* fără subliniere */
   color: inherit; /* păstrează culoarea textului */
-
   position: relative;
   aspect-ratio: 16 / 12;
   background: #2c2c2c;
   border-radius: 10px;
   overflow: hidden;
   cursor: pointer;
-  transition: transform 0.6s ease, box-shadow 0.4s ease;
+  transition: transform 0.6s ease, box-shadow 0.8s ease;
 }
 
 #car1 {
@@ -259,11 +259,11 @@ mark {
 }
 
 #car1:hover {
-  transform: scale(1.01) translateX(20px);
+  transform: scale(1.01) translate(10px, 10px);
 }
 
 #car2:hover {
-  transform: scale(1.01) translateX(-20px);
+  transform: scale(1.01) translate(-10px, 10px);
 }
 
 #car3 {
@@ -281,11 +281,11 @@ mark {
 }
 
 #car3:hover {
-  transform: scale(1.01) translateX(20px);
+  transform: scale(1.01) translate(10px, -10px);
 }
 
 #car4:hover {
-  transform: scale(1.01) translateX(-20px);
+  transform: scale(1.01) translate(-10px, -10px);
 }
 
 .title-car-model {
@@ -294,7 +294,7 @@ mark {
   transform: translate(-50%);
   top: 5%;
   color: #fff;
-  font-size: 3.5rem;
+  font-size: clamp(1.5rem, 2vw, 3.5rem);
   font-weight: 300;
   font-family: "Josefin Sans";
   margin-top: 20px;
@@ -306,10 +306,12 @@ mark {
   top: 1.5%;
   transform: translateX(-50%);
   color: #fff;
+  font-size: clamp(0.5rem, 1vw, 1rem);
 }
 
 .car-card-button {
   color: #fff;
+  font-size: clamp(0.5rem, 1vw, 1rem);
   background: 0;
   border: 0;
   outline: 0;
@@ -338,6 +340,7 @@ mark {
   justify-content: flex-start;
   flex-direction: column;
   gap: 1rem;
+  padding: 1rem;
 }
 
 #blog-title {
@@ -346,7 +349,6 @@ mark {
   font-weight: 300;
   margin: 3rem 0;
   font-family: "dm sans";
-
   text-underline-offset: 10px;
 }
 
@@ -357,17 +359,17 @@ mark {
   flex-wrap: wrap;
   justify-content: center;
   gap: 2.5rem;
-  padding-bottom: 8rem;
+  margin: 0 2rem 5rem 2rem;
 }
 
 .blog-cards {
   position: relative;
   aspect-ratio: 4/3;
-  background: #fff;
+  background: #000000;
   border-radius: 5px;
   overflow: hidden;
   cursor: pointer;
-  flex: 1 1 350px;
+  flex: 1 1 250px;
   max-width: 500px;
 }
 
@@ -391,6 +393,7 @@ mark {
 .blog-cards-title {
   position: absolute;
   left: 1.5%;
+  font-weight: 200;
   bottom: 4.5%;
   color: #fff;
   font-size: clamp(1rem, 1vw, 1.3rem);
@@ -560,8 +563,8 @@ mark {
 
 .container-footer {
   display: flex;
-  flex-wrap: wrap; /* permite să treacă pe rânduri */
-  gap: 2rem; /* spațiu între coloane */
+  flex-wrap: wrap;
+  gap: 2rem;
   width: 90%;
   max-width: 1400px; /* nu devine prea lat pe monitoare mari */
   color: #fff;
@@ -569,12 +572,12 @@ mark {
 }
 
 .footer-sections {
-  flex: 1 1 180px; /* crește/scade cu minim 180px */
+  flex: 1 1 100px; /* crește/scade cu minim 180px */
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 0.5rem;
-  min-width: 150px; /* evită să fie prea îngust pe mobil */
+  min-width: 150px;
 }
 
 .footer-subtitle {
@@ -636,7 +639,7 @@ mark {
 
 .allura-cars-overlay {
   font-family: "allura";
-  font-size: 5rem;
+  font-size: clamp(3.5rem, 4vw, 5rem);
   color: #fff;
   font-weight: 400;
 }
@@ -693,6 +696,7 @@ mark {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: center;
   flex: 1 1 250px;
   max-width: 500px;
   gap: 1rem;
@@ -701,15 +705,15 @@ mark {
 }
 
 .specs-containers:last-child {
-  border: none;
+  border-right: 2px solid transparent;
 }
 
 .title-specs {
-  font-size: clamp(1.4rem, 2vw, 1.5rem);
+  font-size: clamp(1.4rem, 2vw, 1.8rem);
 }
 
 .info-specs {
-  font-size: clamp(4rem, 4vw, 5.5rem);
+  font-size: 4rem;
   font-weight: 200;
 }
 
@@ -790,12 +794,12 @@ mark {
 }
 
 .big-overlay-text {
-  font-size: clamp(2rem, 2.5vw, 4rem);
+  font-size: clamp(1rem, 2.5vw, 4rem);
   font-weight: 300;
 }
 
 .small-overlay-text {
-  font-size: clamp(1rem, 1vw, 1.5rem);
+  font-size: clamp(0.7rem, 1vw, 1.5rem);
   font-weight: 200;
 }
 
@@ -803,6 +807,7 @@ mark {
   width: 100%;
   height: auto;
   overflow: hidden;
+  background-color: #000;
 }
 
 .cards-car-pages-container {
@@ -814,6 +819,8 @@ mark {
   align-items: center;
   justify-content: center;
   gap: 3rem;
+  padding: 1rem;
+  margin: 6rem 0;
 }
 
 .cards-car-pages {
@@ -823,12 +830,11 @@ mark {
   justify-content: flex-start;
   flex: 1 1 300px;
   max-width: 550px;
-  height: 65vh;
+  height: auto;
   background-color: #000000;
   overflow: hidden;
   border-radius: 5px;
   gap: 2.5rem;
-  margin: 8rem 0;
 }
 
 .container-for-overlay {
@@ -850,12 +856,13 @@ mark {
 
 .title-car-pages-cards {
   color: #fff;
-  font-weight: 600;
+  font-weight: 300;
   font-size: clamp(1.4rem, 1vw, 2rem);
 }
 
 .text-car-pages-cards {
   font-size: 1.1rem;
+  font-weight: 200;
   color: #fff;
 }
 
@@ -1039,7 +1046,7 @@ mark {
 .quote-container {
   display: flex;
   align-items: flex-start;
-  justify-content: flex-start;
+  justify-content: center;
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
@@ -1104,4 +1111,157 @@ mark {
   font-size: clamp(3rem, 4.5vw, 10rem);
   text-align: center;
   font-weight: 700;
+}
+
+/*--------------------------------- Media Queries--------------------------------------*/
+
+@media (max-width: 1024px) {
+  #cars-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  #title-cars-section {
+    margin: 7rem 0;
+  }
+
+  .car {
+    transition: none;
+  }
+
+  #car1:hover,
+  #car2:hover,
+  #car3:hover,
+  #car4:hover {
+    transform: none;
+  }
+
+  .blog-cards {
+    max-width: 380px;
+  }
+
+  .view-story-button {
+    width: 12rem;
+  }
+
+  #cars-hero-section {
+    height: 60vh;
+  }
+
+  .info-specs {
+    font-size: 2.5rem;
+  }
+
+  .photo-car-pages-section {
+    height: 58vh;
+  }
+
+  .cards-car-pages {
+    max-width: 550px;
+  }
+
+  .text-car-introduction-container {
+    margin: 2rem 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .history-container-position {
+    padding: 3rem 0;
+  }
+
+  .history-section {
+    padding-bottom: 4rem;
+  }
+
+  .view-story-button {
+    width: 12rem;
+  }
+
+  #cars-hero-section {
+    height: 58vh;
+  }
+
+  .info-specs {
+    font-size: 2rem;
+  }
+
+  .cards-car-pages {
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 600px) {
+  #cars-container {
+    gap: 1rem;
+    padding: 1rem 1rem;
+  }
+
+  #title-cars-section {
+    margin: 3.5rem 0;
+    padding: 0 0.5rem;
+  }
+
+  #blog-title {
+    margin: 2rem 0;
+  }
+
+  .history-section {
+    padding-bottom: 3rem;
+  }
+
+  #cars-hero-section {
+    height: 37vh;
+  }
+
+  .info-specs {
+    font-size: 2rem;
+  }
+
+  #size-correction {
+    font-size: 2.3rem;
+  }
+
+  .specs-introduction-container {
+    gap: 3rem;
+  }
+
+  .specs-containers {
+    border-right: 0;
+  }
+
+  .photo-car-pages-section {
+    height: 36vh;
+  }
+
+  #btnDiscover {
+    visibility: hidden;
+  }
+
+  .cards-car-pages-container {
+    gap: 6rem;
+    margin: 5rem 0;
+  }
+
+  .specs-containers {
+    align-items: flex-start;
+    max-width: 350px;
+    border-bottom: solid 2px #3d3d3d;
+  }
+
+  #btn-hidden {
+    visibility: hidden;
+  }
+
+  .text-car-introduction-container {
+    margin: 4rem 0;
+  }
+
+  #blog-hero-section {
+    height: 37vh;
+  }
+
+  .blog-pages-photos {
+    height: 40vh;
+  }
 }
