@@ -1109,17 +1109,19 @@ mark {
 
 .log-in-section {
   width: 100%;
-  height: auto;
+  min-height: 100vh;
   background-color: #fff;
   display: flex;
 }
 
 .account-pages-back-image {
   width: 65vw;
-  height: 100vh;
-  background-image: url("photos/McLaren-Gallery-3.webp");
+  min-height: 100vh;
+
+  background-image: url("photos/photo-1621615578530-cbf3c443165f (1).jpeg");
   background-position: center;
   background-size: cover;
+  background-repeat: no-repeat;
 }
 
 #logo-account-pages {
