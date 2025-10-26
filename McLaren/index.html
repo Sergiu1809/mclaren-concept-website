@@ -36,49 +36,58 @@
 
       <div id="header">
         <a href="index.html#home" id="logo">
-          <p class="M">M</p>
-          <p class="orange">cLaren</p>
-          <img id="McLarenIcon" src="photos/icons8-mclaren-30.png" />
+          <!-- prettier-ignore -->
+          <p id="logo-footer-text"> <span class="M" >M</span><span>c</span><span class="orange">Laren</span></p>
         </a>
 
-        <div class="buttons">
+        <nav class="buttons">
           <a href="index.html#home" class="button-header" id="btnHome">HOME</a>
           <a href="index.html#cars" class="button-header" id="btnAutomotive">AUTOMOTIVE</a>
           <a href="index.html#blog" class="button-header" id="btnBlog">OUR BLOG</a>
           <a href="index.html#history" class="button-header" id="btnHistory">HISTORY</a>
-        </div>
+        </nav>
 
-        <div id="accountIcon"></div>
+        <div class="menu-toggle" id="mobile-menu-icon"></div>
+
+        <a href="login.html" id="accountIcon"></a>
       </div>
+
+      <nav class="mobile-nav hidden2">
+        <img id="close-menu-btn" src="photos/icons8-close.svg" />
+        <div class="bottom-border-mobile-menu-selections"><a href="#home" class="button-header">HOME</a></div>
+        <div class="bottom-border-mobile-menu-selections"><a href="#cars" class="button-header">AUTOMOTIVE</a></div>
+        <div class="bottom-border-mobile-menu-selections"><a href="#blog" class="button-header">OUR BLOG</a></div>
+        <div class="bottom-border-mobile-menu-selections"><a href="#history" class="button-header">HISTORY</a></div>
+      </nav>
 
       <div id="video-overlay">
         <!-- prettier-ignore -->
-        <p class="big-index"><span><mark>  <span class="M"> M</span>c<span class="orange">Laren </span> W1</mark></span></p>
-        <a href="car-W1.html" class="btnDiscover">Discover more</a>
+        <p class="big-index hidden"><span><mark>  <span class="M"> M</span>c<span class="orange">Laren </span> W1</mark></span></p>
+        <a href="car-W1.html" class="btnDiscover hidden">Discover more</a>
       </div>
     </section>
 
     <section id="cars" class="cars-section">
       <!-- prettier-ignore -->
-      <p id="title-cars-section">A showcase of speed, precision, and pure adrenaline<span class="orange">.</span></p>
+      <p class="hidden" id="title-cars-section">A showcase of speed, precision, and pure adrenaline<span class="orange">.</span></p>
 
       <div id="cars-container">
-        <a href="car-750S.html" class="car" id="car1">
+        <a href="car-750S.html" class="car hidden" id="car1">
           <span class="short-description-car-card">Unleash Pure Speed</span>
           <span class="title-car-model">750S</span>
           <button class="car-card-button">Learn More</button>
         </a>
-        <a href="car-artura.html" class="car" id="car2">
+        <a href="car-artura.html" class="car hidden" id="car2">
           <span class="short-description-car-card">Freedom in Motion</span>
           <span class="title-car-model">Artura</span>
           <button class="car-card-button">Learn More</button>
         </a>
-        <a href="car-W1.html" class="car" id="car3">
+        <a href="car-W1.html" class="car hidden" id="car3">
           <span class="short-description-car-card">Engineering Masterpiece</span>
           <span class="title-car-model">W1</span>
           <button class="car-card-button">Learn More</button>
         </a>
-        <a href="car-GTS.html" class="car" id="car4">
+        <a href="car-GTS.html" class="car hidden" id="car4">
           <span class="short-description-car-card">Precision Meets Power</span>
           <span class="title-car-model">GTS</span>
           <button class="car-card-button">Learn More</button>
@@ -87,21 +96,21 @@
     </section>
 
     <section id="blog" class="blog-section">
-      <p id="blog-title">Discover</p>
+      <p class="hidden" id="blog-title">Discover</p>
       <div class="blog-cards-container">
-        <a href="blog-formula1.html" class="blog-cards">
+        <a href="blog-formula1.html" class="blog-cards hidden">
           <img class="blog-images" loading="lazy" src="photos-blog/lando-norris-mclaren-mcl38.jpg" />
           <div class="overlay"></div>
           <span class="blog-cards-title">McLaren in Formula 1</span>
           <img class="arrow-right" loading="lazy" src="photos/arrow-right-stroke (2).png" />
         </a>
-        <a href="blog-innovation.html" class="blog-cards">
+        <a href="blog-innovation.html" class="blog-cards hidden">
           <img class="blog-images" loading="lazy" src="photos/the-mclaren-technology-centre.png" />
           <div class="overlay"></div>
           <span class="blog-cards-title">McLaren Supercar Innovation</span>
           <img class="arrow-right" loading="lazy" src="photos/arrow-right-stroke (2).png" />
         </a>
-        <a href="blog-experience.html" class="blog-cards">
+        <a href="blog-experience.html" class="blog-cards hidden">
           <img
             class="blog-images"
             loading="lazy"
@@ -116,10 +125,10 @@
     <section id="history" class="history-section">
       <div class="history-photo-container"></div>
       <!-- prettier-ignore -->
-      <span id="history-txt-mclaren"><span class="M">M</span>c<span class="orange">Laren</span></span>
-      <span id="history-txt-history">History</span>
+      <span class="hidden" id="history-txt-mclaren"><span class="M">M</span>c<span class="orange">Laren</span></span>
+      <span class="hidden" id="history-txt-history">History</span>
 
-      <div class="history-container-position">
+      <div class="history-container-position hidden">
         <div class="history-photo1"></div>
         <div class="history-story-text-containers">
           <p id="history-text-title">The Beginning of a Legend</p>
@@ -135,7 +144,7 @@
         </div>
       </div>
 
-      <div class="history-container-position">
+      <div class="history-container-position hidden">
         <div class="history-story-text-containers">
           <p id="history-text-title">From Track to Road</p>
           <p id="history-text-p">
@@ -156,23 +165,23 @@
       <div class="container-footer">
         <div class="footer-sections">
           <p class="footer-subtitle">AUTOMOTIVE</p>
-          <p class="footer-text">750S</p>
-          <p class="footer-text">Artura</p>
-          <p class="footer-text">W1</p>
-          <p class="footer-text">GTS</p>
+          <a href="car-750S.html" class="footer-text">750S</a>
+          <a href="car-artura.html" class="footer-text">Artura</a>
+          <a href="car-W1.html" class="footer-text">W1</a>
+          <a href="car-GTS.html" class="footer-text">GTS</a>
         </div>
 
         <div class="footer-sections">
           <p class="footer-subtitle">BLOG</p>
-          <p class="footer-text">Formula 1</p>
-          <p class="footer-text">Innovation</p>
-          <p class="footer-text">Experience</p>
+          <a href="blog-formula1.html" class="footer-text">Formula 1</a>
+          <a href="blog-innovation.html" class="footer-text">Innovation</a>
+          <a href="blog-experience.html" class="footer-text">Experience</a>
         </div>
 
         <div class="footer-sections">
           <p class="footer-subtitle">HISTORY</p>
-          <p class="footer-text">The Beginning of a Legend</p>
-          <p class="footer-text">From Track to Road</p>
+          <a href="blog-legend.html" class="footer-text">The Beginning of a Legend</a>
+          <a href="blog-track-road.html" class="footer-text">From Track to Road</a>
         </div>
 
         <div class="footer-sections">

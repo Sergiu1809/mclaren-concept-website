@@ -22,9 +22,8 @@
 
       <div href="index.html#home" id="header">
         <a href="index.html#home" id="logo">
-          <p class="M">Mc</p>
-          <p class="orange">Laren</p>
-          <img id="McLarenIcon" src="photos/icons8-mclaren-30.png" />
+          <!-- prettier-ignore -->
+          <p id="logo-footer-text" class="M">M<span>c</span><span class="orange">Laren</span></p>
         </a>
 
         <div class="buttons">
@@ -34,21 +33,37 @@
           <a href="index.html#history" class="button-header" id="btnHistory">HISTORY</a>
         </div>
 
+        <div class="menu-toggle" id="mobile-menu-icon"></div>
+
         <div id="accountIcon"></div>
       </div>
 
+      <nav class="mobile-nav hidden2">
+        <img id="close-menu-btn" src="photos/icons8-close.svg" />
+        <div class="bottom-border-mobile-menu-selections"><a href="index.html#home" class="button-header">HOME</a></div>
+        <div class="bottom-border-mobile-menu-selections">
+          <a href="index.html#cars" class="button-header">AUTOMOTIVE</a>
+        </div>
+        <div class="bottom-border-mobile-menu-selections">
+          <a href="index.html#blog" class="button-header">OUR BLOG</a>
+        </div>
+        <div class="bottom-border-mobile-menu-selections">
+          <a href="index.html#history" class="button-header">HISTORY</a>
+        </div>
+      </nav>
+
       <div id="video-overlay">
-        <p>
+        <p class="hidden">
           <span class="allura-cars-overlay">GTS</span>
         </p>
-        <a href="car-GTS.html#introduction-cars" id="btn-hidden" class="btnDiscover">Discover more</a>
+        <a href="car-GTS.html#introduction-cars" id="btn-hidden" class="btnDiscover hidden">Discover more</a>
       </div>
     </section>
 
     <section id="introduction-cars" class="introduction-car-pages-section">
       <div class="text-car-introduction-container">
-        <p class="title-car-pages-intro">INTRODUCING GTS</p>
-        <p class="text-car-pages-intro">
+        <p class="title-car-pages-intro hidden">INTRODUCING GTS</p>
+        <p class="text-car-pages-intro hidden">
           McLaren’s bold fusion of performance and practicality. The GTS is sculpted to combine supercar exhilaration
           with everyday usability, redefining what a grand tourer can be. Its sleek silhouette is shaped by
           aerodynamics, delivering elegance without compromise. Inside, refinement meets functionality — offering
@@ -58,18 +73,18 @@
       </div>
 
       <div class="specs-introduction-container">
-        <div class="specs-containers">
+        <div class="specs-containers hidden">
           <p class="title-specs">Engine Type</p>
           <p class="info-specs">Twin-Turbo V8</p>
         </div>
-        <div class="specs-containers">
+        <div class="specs-containers hidden">
           <p class="title-specs">
             Power
             <span class="measurement">HP</span>
           </p>
           <p class="info-specs">626 HP</p>
         </div>
-        <div class="specs-containers">
+        <div class="specs-containers hidden">
           <p class="title-specs">
             Speed
             <span class="measurement">KM/H</span>
@@ -81,14 +96,16 @@
 
     <section id="photo1-gts" class="photo-car-pages-section">
       <div class="photo-car-pages-overlay-left">
-        <p class="big-overlay-text">Beyond the Journey</p>
-        <p class="small-overlay-text">Designed to turn every road into an experience of style and performance.</p>
+        <p class="big-overlay-text hidden">Beyond the Journey</p>
+        <p class="small-overlay-text hidden">
+          Designed to turn every road into an experience of style and performance.
+        </p>
       </div>
     </section>
 
     <section class="cards-car-pages-section">
       <div class="cards-car-pages-container">
-        <div class="cards-car-pages">
+        <div class="cards-car-pages hidden">
           <div class="container-for-overlay">
             <div class="overlay"></div>
             <img class="photos-cards-car-pages" src="photos-car-pages/2025-mclaren-gts-action-110-6596fa2b9c94a.avif" />
@@ -100,7 +117,7 @@
             experience velocity with composure and control.
           </p>
         </div>
-        <div class="cards-car-pages">
+        <div class="cards-car-pages hidden">
           <div class="container-for-overlay">
             <div class="overlay"></div>
             <img class="photos-cards-car-pages" src="photos-car-pages/Mclaren-GTS-Interior.png" />
@@ -112,7 +129,7 @@
             infused with McLaren’s racing DNA, the interior blends elegance with driver-focused precision.
           </p>
         </div>
-        <div class="cards-car-pages">
+        <div class="cards-car-pages hidden">
           <div class="container-for-overlay">
             <div class="overlay"></div>
             <img class="photos-cards-car-pages" src="photos-car-pages/mclaren-gts-side-720x405px (1).jpg" />
@@ -129,8 +146,8 @@
 
     <section id="photo2-gts" class="photo-car-pages-section">
       <div class="photo-car-pages-overlay-left">
-        <p class="big-overlay-text">Driven by Elegance</p>
-        <p class="small-overlay-text">The GTS transforms performance into an art of refinement.</p>
+        <p class="big-overlay-text hidden">Driven by Elegance</p>
+        <p class="small-overlay-text hidden">The GTS transforms performance into an art of refinement.</p>
       </div>
     </section>
 
@@ -148,23 +165,23 @@
 
         <div class="footer-sections">
           <p class="footer-subtitle">BLOG</p>
-          <a class="footer-text">Formula 1</a>
-          <a class="footer-text">Innovation</a>
-          <a class="footer-text">Experience</a>
+          <a href="blog-formula1.html" class="footer-text">Formula 1</a>
+          <a href="blog-innovation.html" class="footer-text">Innovation</a>
+          <a href="blog-experience.html" class="footer-text">Experience</a>
         </div>
 
         <div class="footer-sections">
           <p class="footer-subtitle">HISTORY</p>
-          <a class="footer-text">The Beginning of a Legend</a>
-          <a class="footer-text">From Track to Road</a>
+          <a href="blog-legend.html" class="footer-text">The Beginning of a Legend</a>
+          <a href="blog-track-road.html" class="footer-text">From Track to Road</a>
         </div>
 
         <div class="footer-sections">
           <p class="footer-subtitle">POLICIES & TERMS</p>
-          <a class="footer-text">Cookie Policy</a>
-          <a class="footer-text">Privacy Policy</a>
-          <a class="footer-text">Terms and Conditions</a>
-          <a class="footer-text">Legal Notice</a>
+          <p class="footer-text">Cookie Policy</p>
+          <p class="footer-text">Privacy Policy</p>
+          <p class="footer-text">Terms and Conditions</p>
+          <p class="footer-text">Legal Notice</p>
         </div>
 
         <div class="footer-sections">
@@ -173,5 +190,6 @@
         </div>
       </div>
     </section>
+    <script src="index.js"></script>
   </body>
 </html>
