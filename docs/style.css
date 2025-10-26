@@ -600,6 +600,7 @@ mark {
   font-size: clamp(1.8rem, 2.5vw, 2.5rem);
   white-space: nowrap;
   color: #fff;
+  text-decoration: none;
 }
 
 /*--------------------------------- Car Pages Hero--------------------------------------*/
