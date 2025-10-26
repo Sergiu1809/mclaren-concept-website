@@ -5,12 +5,12 @@ This project was created to practice and demonstrate modern **HTML**, **CSS**, a
 
 ---
 
-## 🚀 Live Demo
+##  Live Demo
 🔗 [View on GitHub Pages](https://sergiu1809.github.io/mclaren-concept-website/index.html)
 
 ---
 
-## 🧱 Built With
+##  Built With
 - **HTML5** – semantic, accessible structure  
 - **CSS3** – responsive layout, Flexbox, animations  
 - **JavaScript (Vanilla)** – menu interactivity and dynamic behavior  
@@ -19,8 +19,8 @@ This project was created to practice and demonstrate modern **HTML**, **CSS**, a
 
 ---
 
-## 📱 Features
-✅ Responsive navigation bar  
+##  Features
+✅  Responsive navigation bar  
 ✅ Full-screen mobile menu with toggle animation  
 ✅ Custom fonts and McLaren-inspired color palette  
 ✅ Hero section with background images  
