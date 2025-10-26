@@ -603,6 +603,11 @@ mark {
   text-decoration: none;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 /*--------------------------------- Car Pages Hero--------------------------------------*/
 
 .hero-background-photo-car-pages {
