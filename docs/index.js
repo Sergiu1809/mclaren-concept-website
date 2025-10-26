@@ -54,3 +54,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   hiddenElements.forEach((el) => observer.observe(el));
 });
+
+const video = document.querySelector("video");
+video.play().catch(() => {
+  document.body.addEventListener("touchstart", () => video.play(), { once: true });
+});
