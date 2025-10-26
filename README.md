@@ -8,8 +8,6 @@ This project was created to practice and demonstrate modern **HTML**, **CSS**, a
 ## 🚀 Live Demo
 🔗 [View on GitHub Pages](https://sergiu1809.github.io/mclaren-concept-website/)
 
-*(The project is currently private — make it public to enable GitHub Pages preview.)*
-
 ---
 
 ## 🧱 Built With
