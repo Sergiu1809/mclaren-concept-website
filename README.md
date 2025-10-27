@@ -1,4 +1,4 @@
-# 🏎️ McLaren Inspired Website
+#  McLaren Inspired Website
 
 A fully responsive front-end project inspired by the official **McLaren Automotive** website.  
 This project was created to practice and demonstrate modern **HTML**, **CSS**, and **JavaScript** techniques — including responsive navigation, mobile-first design, and interactive UI components.
